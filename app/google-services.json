@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "235571389972",
+    "project_id": "skating-club-271f8",
+    "storage_bucket": "skating-club-271f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235571389972:android:69511be43c47a923b06901",
+        "android_client_info": {
+          "package_name": "com.example.skatingclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235571389972-5392pa64gtc2d3u2qhkjhqn3nam8cdgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.skatingclub",
+            "certificate_hash": "29e1911e581e5f28f416895ca0959a82cbd09692"
+          }
+        },
+        {
+          "client_id": "235571389972-qjf0v14vf7v0vksneg1o81otfarq29cr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6b49GvmKg2eSlrdE8ymcaMqahp4y2Imc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235571389972-qjf0v14vf7v0vksneg1o81otfarq29cr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
