@@ -11,4 +11,10 @@
     <color name="MainColor">#dcf1fa</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button">#bde0ff</color>
+    <color name="colorPrimaryVariant">#8CC9FF</color>
+
+
+
+    <color name="bg">#106200EE</color>
+    <color name="purple_name">#BB46ADFB</color>
 </resources>

@@ -2,20 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/activity_main">
+    android:background="@drawable/img_1">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-
         android:layout_alignParentBottom="true"
-
-
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
@@ -28,52 +26,63 @@
         app:backgroundTint="#54C5CF"
         app:fabSize="mini" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_layout"
+    <TextView
+        android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@id/btnSend" >
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/purple_name"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/first_names" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <View
+        android:id="@+id/isOnlineChat"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="@+id/textViewName"
+        app:layout_constraintTop_toTopOf="@+id/textViewName"
+        tools:background="@drawable/ic_online_user" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/editTextMessage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:listitem="@layout/other_message_item" />
 
     <EditText
-        android:id="@+id/messageField"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginStart="2dp"
-
-
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
-
-
-        android:layout_toLeftOf="@+id/btnSend"
-
-        android:hint="@string/edittext_text"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:textColorHighlight="#03A9F4"
-        android:textColorHint="#2196F3" />
-    <!--  прозрачный разделитель item -->
-    <!--  высота item -->
-    <!--  расстояние между item и EditText-->
-
-    <ListView
-        android:id="@+id/list_of_messages"
+        android:id="@+id/editTextMessage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/text_layout"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/white"
+        android:hint="@string/your_message"
+        android:inputType="textMultiLine"
+        android:maxHeight="200dp"
+        android:padding="16dp"
+        android:paddingEnd="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@tools:sample/lorem/random" />
 
 </RelativeLayout>

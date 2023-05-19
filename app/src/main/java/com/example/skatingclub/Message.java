@@ -5,40 +5,28 @@ import java.util.Date;
 // объект, содержащий в себе имя пользователя, время отправки сообщения и само сообщение,
 // хренящееся в бд и выводщееся на экран
 public class Message {
-    public String userName;
-    public String textMessage;
-    private long messageTime;
+    private String text;
+    private String senderId;
+    private String receiverId;
 
-    public Message (){}
-
-    public Message (String userName, String textMessage){
-        this.userName = userName;
-        this.textMessage = textMessage;
-
-        this.messageTime = new Date().getTime();
+    public Message() {
     }
 
-    public String getUserName() {
-        return userName;
+    public Message(String text, String senderId, String receiverId) {
+        this.text = text;
+        this.senderId = senderId;
+        this.receiverId = receiverId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getText() {
+        return text;
     }
 
-    public String getTextMessage() {
-        return textMessage;
+    public String getSenderId() {
+        return senderId;
     }
 
-    public void setTextMessage(String textMessage) {
-        this.textMessage = textMessage;
-    }
-
-    public long getMessageTime() {
-        return messageTime;
-    }
-
-    public void setMessageTime(long messageTime) {
-        this.messageTime = messageTime;
+    public String getReceiverId() {
+        return receiverId;
     }
 }
